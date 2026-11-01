@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" fill="#f8fafc"/>
+  <rect x="20" y="20" width="160" height="160" rx="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="2"/>
+  <!-- Pipe icon -->
+  <path d="M60 85 h50 a15 15 0 0 1 15 15 v40" fill="none" stroke="#ea580c" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="60" cy="85" r="7" fill="#ea580c"/>
+  <circle cx="125" cy="140" r="7" fill="#ea580c"/>
+  <!-- Bolt / electrical spark -->
+  <path d="M140 60 l-15 25 h15 l-10 20" fill="none" stroke="#f97316" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="100" y="168" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#94a3b8" text-anchor="middle">PIPE CENTRE</text>
+</svg>
