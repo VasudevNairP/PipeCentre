@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base typography ─────────────────────────────────────────────────────── */
+@layer base {
+  html {
+    font-size: 15px;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-sans text-gray-900 bg-white;
+    line-height: 1.6;
+  }
+
+  /* Uniform heading scale */
+  h1 { @apply text-2xl font-bold   leading-tight tracking-tight; }
+  h2 { @apply text-xl  font-bold   leading-snug  tracking-tight; }
+  h3 { @apply text-base font-semibold leading-snug; }
+  h4 { @apply text-sm  font-semibold leading-snug; }
+
+  p { @apply leading-relaxed; }
+
+  /* Form elements inherit font */
+  input, select, textarea, button {
+    font-family: inherit;
+    font-size: inherit;
+  }
+}
+
+/* ─── Reusable component classes ──────────────────────────────────────────── */
+@layer components {
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-brand-600 hover:bg-brand-700 active:bg-brand-800 text-white text-sm font-semibold rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white hover:bg-gray-50 border border-gray-300 text-gray-700 text-sm font-semibold rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 hover:bg-gray-100 text-gray-700 text-sm font-medium rounded-lg transition-colors;
+  }
+
+  /* Form controls */
+  .input {
+    @apply w-full px-3 py-2.5 border border-gray-300 rounded-lg text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition;
+  }
+  .label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-white rounded-xl border border-gray-200 shadow-sm;
+  }
+
+  /* Stock badges */
+  .badge-in-stock {
+    @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-green-100 text-green-800;
+  }
+  .badge-low-stock {
+    @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-800;
+  }
+  .badge-out-of-stock {
+    @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-red-100 text-red-800;
+  }
+
+  /* Page layout helpers */
+  .page-container {
+    @apply max-w-7xl mx-auto px-4;
+  }
+  .page-section {
+    @apply py-10 md:py-14;
+  }
+  .page-header {
+    @apply mb-6;
+  }
+  .page-title {
+    @apply text-2xl font-bold text-gray-900;
+  }
+  .section-title {
+    @apply text-xl font-bold text-gray-900;
+  }
+  .muted {
+    @apply text-sm text-gray-500;
+  }
+  .caption {
+    @apply text-xs text-gray-400;
+  }
+
+  /* Admin page wrapper */
+  .admin-page {
+    @apply flex-1 p-5 md:p-7 max-w-6xl;
+  }
+  .admin-header {
+    @apply mb-6 pb-4 border-b border-gray-200;
+  }
+}
